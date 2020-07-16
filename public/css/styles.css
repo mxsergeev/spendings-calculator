@@ -1,16 +1,31 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-size: 1.17rem;
     font-family: 'Architects Daughter', cursive;
 }
 html {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background: url('/images/money-wallpaper.jpg') center center;
 }
 
@@ -19,8 +34,13 @@ html {
 }
 .flex-container {
     height: 85vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin: 0 auto;
     width: 95%;
 }
@@ -50,32 +70,43 @@ h2, h3 {
     background-color: lightgray;
 }
 .input-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
 }
 .limit, .period {
     width: 50%;
 }
 .number {
-    flex: 1 0 20%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 20%;
+            flex: 1 0 20%;
     width: 30%;
     margin: 5px;
     margin-left: 0;
 }
 .text {
-    flex: 3 0 60%;
+    -webkit-box-flex: 3;
+        -ms-flex: 3 0 60%;
+            flex: 3 0 60%;
     width: 70%;
     margin: 5px;
 }
 .number:hover, .number:active, .number:focus, .text:hover, .text:active, .text:focus {
-    transform: translate(1px, 2px);
+    -webkit-transform: translate(1px, 2px);
+        -ms-transform: translate(1px, 2px);
+            transform: translate(1px, 2px);
     /* box-shadow: -10px 3px teal; */
 }
 .money-bag {
     width: 80px;    
 }
-.grayscale { filter: grayscale(100%); }
-.redscale { filter: hue-rotate(250deg) brightness(30%) saturate(200%); }
+.grayscale { -webkit-filter: grayscale(100%); filter: grayscale(100%); }
+.redscale { -webkit-filter: hue-rotate(250deg) brightness(30%) saturate(200%); filter: hue-rotate(250deg) brightness(30%) saturate(200%); }
 .spent-remaining {
     position: relative;
     bottom: 10px;
@@ -105,50 +136,104 @@ h2, h3 {
     animation: shake .2s 2 ease-in-out alternate-reverse;
 }
 .onchange-transform {
-    animation: jump 1.5s ease-in-out 1;
+    -webkit-animation: jump 1.5s ease-in-out 1;
+            animation: jump 1.5s ease-in-out 1;
 }
 .sign {
     position: relative;
     bottom: 50px;
     width: 50px;
 }
+@-webkit-keyframes shake {
+    50% {
+        -webkit-transform: translate(10px, -1px) skew(-1deg, -2deg) rotate(-5deg);
+                transform: translate(10px, -1px) skew(-1deg, -2deg) rotate(-5deg);
+    }
+}
 @keyframes shake {
     50% {
-        transform: translate(10px, -1px) skew(-1deg, -2deg) rotate(-5deg);
+        -webkit-transform: translate(10px, -1px) skew(-1deg, -2deg) rotate(-5deg);
+                transform: translate(10px, -1px) skew(-1deg, -2deg) rotate(-5deg);
+    }
+}
+@-webkit-keyframes jump {
+    25% {
+        -webkit-transform: translateY(-100px);
+                transform: translateY(-100px);
+    }
+    45% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+    60% {
+        -webkit-transform: translateY(-60px);
+                transform: translateY(-60px);
+    }
+    75% {
+        -webkit-transform: translateY(5px);
+                transform: translateY(5px);
+    }
+    90% {
+        -webkit-transform: translateY(-20px);
+                transform: translateY(-20px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
     }
 }
 @keyframes jump {
     25% {
-        transform: translateY(-100px);
+        -webkit-transform: translateY(-100px);
+                transform: translateY(-100px);
     }
     45% {
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
     }
     60% {
-        transform: translateY(-60px);
+        -webkit-transform: translateY(-60px);
+                transform: translateY(-60px);
     }
     75% {
-        transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+                transform: translateY(5px);
     }
     90% {
-        transform: translateY(-20px);
+        -webkit-transform: translateY(-20px);
+                transform: translateY(-20px);
     }
     100% {
-        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
+@-webkit-keyframes float {
+    50% {
+        -webkit-transform: translate(0, 5px) rotate(.5deg);
+                transform: translate(0, 5px) rotate(.5deg);
+    }
+    100% {
+        -webkit-transform: rotate(-0.5deg);
+                transform: rotate(-0.5deg);
     }
 }
 @keyframes float {
     50% {
-        transform: translate(0, 5px) rotate(.5deg);
+        -webkit-transform: translate(0, 5px) rotate(.5deg);
+                transform: translate(0, 5px) rotate(.5deg);
     }
     100% {
-        transform: rotate(-0.5deg);
+        -webkit-transform: rotate(-0.5deg);
+                transform: rotate(-0.5deg);
     }
 }
 
 .clear {
     width: 40%;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin-bottom: 50px;
 }
 @media (min-width: 500px) {
