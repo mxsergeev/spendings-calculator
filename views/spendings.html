@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate your spendings</title>
+    <script type="application/javascript" src="js/app.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+    <div class="flex-container">
+        <div class="settings">
+            <h3>Limit</h3>
+                <input class="limit" name="limit" type="number" placeholder="€€€">
+            <h3>Period</h3>
+                <input class="period" name="period" type="number" placeholder="Days">
+        </div>
+        <main class="spendings">
+            <h2 class="h2-spent">Money spent</h2>
+            <div class="input-container">
+                <!-- <input type="number"> -->
+                <!-- <textarea></textarea> -->
+            </div>
+        </main>
+        <div class="info">
+            <div class="animation-container">
+                <img class='money-bag grayscale' src="/images/money2.svg" alt="Money bag">
+                <img class="sign hidden" src="/images/sign.svg" alt="red sign">
+                <div class="spent-remaining"></div>
+            </div>
+            <div class="spent-percent">Specify the limit and period to see more info.</div>
+            <div class="spent-days"></div>
+            <h3 class="spent">Enter spendings to see amount.</h3>
+            <div class="random-text-container">
+                <span class="random-text"></span>
+                <span class="highlighted"></span>
+            </div>
+        </div>
+        <button class="clear">Clear</button>
+    </div>
+    </div>
+</body>
+</html>
