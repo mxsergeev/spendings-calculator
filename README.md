@@ -1,3 +1,3 @@
 # spendings-calculator
-npm install
+npm install /n
 npm start
