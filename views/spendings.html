@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculate your spendings</title>
-    <script type="application/javascript" src="js/app.js" defer></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/modules/visualControl.js"></script>
+    <script type="module" src="js/modules/eventListeners.js"></script>
+    <script type="module" src="js/modules/createAndAppendFields.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
@@ -26,8 +29,8 @@
         <div class="info">
             <div class="animation-container">
                 <img class='money-bag grayscale' src="/images/money2.svg" alt="Money bag">
-                <img class="sign hidden" src="/images/sign.svg" alt="red sign">
                 <div class="spent-remaining"></div>
+                <img class="sign hidden" src="/images/sign.svg" alt="red sign">
             </div>
             <div class="spent-percent">Specify the limit and period to see more info.</div>
             <div class="spent-days"></div>

@@ -5,7 +5,6 @@
 * Browsers: last 4 version
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 * {
@@ -110,6 +109,7 @@ h2, h3 {
 .spent-remaining {
     position: relative;
     bottom: 10px;
+    z-index: 2;
     margin-bottom: -30px;
     font-size: 1.35rem;
     color: black;
@@ -143,6 +143,9 @@ h2, h3 {
     position: relative;
     bottom: 50px;
     width: 50px;
+    z-index: 1;
+    margin-bottom: 20px;
+    padding: 0;
 }
 @-webkit-keyframes shake {
     50% {

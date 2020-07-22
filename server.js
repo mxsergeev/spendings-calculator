@@ -4,12 +4,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 app.set('port', (process.env.PORT || 3000));
-// const publicDir = path.join(__dirname,'/public');
-// app.use('/scripts', express.static(__dirname + '/scripts/'));
-// app.use(express.static(publicDir));
 
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use('/static', express.static('public'));
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
